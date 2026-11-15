@@ -256,3 +256,15 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+scheduler_events = {
+	"daily": [
+		"zyra.tasks.expiry_alert",
+        "zyra.tasks.reorder_alert"
+	]
+}
+
+doc_events = {
+	"Sales Order": {
+		"before_submit": "zyra.sales_order_vald.check_expiry"
+	}
+}
