@@ -36,5 +36,24 @@
   "print_hide": 0,
   "read_only": 0,
   "reqd": 0
+ },
+ {
+  "default": null,
+  "description": "Recommended skin type for this product.",
+  "doctype": "Custom Field",
+  "dt": "Item",
+  "fieldname": "custom_skin_type",
+  "fieldtype": "Select",
+  "hidden": 0,
+  "in_list_view": 1,
+  "in_standard_filter": 1,
+  "insert_after": "item_group",
+  "label": "Skin Type",
+  "name": "Item-custom_skin_type",
+  "no_copy": 0,
+  "options": "Oily\nDry\nCombination\nNormal\nSensitive",
+  "print_hide": 0,
+  "read_only": 0,
+  "reqd": 0
  }
 ]

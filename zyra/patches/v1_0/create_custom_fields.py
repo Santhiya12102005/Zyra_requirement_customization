@@ -6,7 +6,7 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 
 def execute():
-	"""Create custom fields on standard ERPNext DocTypes for Zyra Product Sample integration."""
+	"""Create custom fields on standard ERPNext DocTypes for Zyra integration."""
 	custom_fields = {
 		"Sales Order": [
 			{
@@ -28,6 +28,18 @@ def execute():
 				"insert_after": "customer_name",
 				"read_only": 0,
 				"description": "Linked Product Sample for which free sample stock was dispatched.",
+			}
+		],
+		"Item": [
+			{
+				"fieldname": "custom_skin_type",
+				"label": "Skin Type",
+				"fieldtype": "Select",
+				"options": "\nOily\nDry\nCombination\nNormal\nSensitive",
+				"insert_after": "item_group",
+				"in_list_view": 1,
+				"in_standard_filter": 1,
+				"description": "Recommended skin type for this product.",
 			}
 		],
 	}

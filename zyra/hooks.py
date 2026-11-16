@@ -287,6 +287,9 @@ fixtures = [
 	},
 	{
 		"dt": "Custom Field",
-		"filters": [["dt", "in", ["Sales Order"]]],
+		"filters": [["dt", "in", ["Sales Order", "Delivery Note", "Item"]]],
 	},
+]
+website_route_rules = [
+	{"from_route": "/product-recommend", "to_route": "app/product-recommend"},
 ]

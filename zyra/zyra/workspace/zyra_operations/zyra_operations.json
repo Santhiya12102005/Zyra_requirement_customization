@@ -1,0 +1,459 @@
+{
+ "app": "zyra",
+ "charts": [],
+ "content": "[{\"id\":\"hdr_overview\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operations Overview</b></span>\",\"col\":12}},{\"id\":\"nc_fin_prod\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Finished Products\",\"col\":3}},{\"id\":\"nc_sales_ord\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Sales Orders\",\"col\":3}},{\"id\":\"nc_work_ord\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Work Orders\",\"col\":3}},{\"id\":\"nc_low_stock\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Low Stock Items\",\"col\":3}},{\"id\":\"spc_1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hdr_shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Shortcuts</b></span>\",\"col\":12}},{\"id\":\"sc_recommender\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Recommender\",\"col\":2}},{\"id\":\"sc_sample\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Sample\",\"col\":2}},{\"id\":\"sc_sales_order\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":2}},{\"id\":\"sc_work_order\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work Order\",\"col\":2}},{\"id\":\"sc_delivery_note\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Note\",\"col\":2}},{\"id\":\"sc_stock_entry\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":2}},{\"id\":\"spc_2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hdr_sections\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operations &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"card_masters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"card_selling\",\"type\":\"card\",\"data\":{\"card_name\":\"Selling\",\"col\":4}},{\"id\":\"card_buying\",\"type\":\"card\",\"data\":{\"card_name\":\"Buying\",\"col\":4}},{\"id\":\"card_stock\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock\",\"col\":4}},{\"id\":\"card_mfg\",\"type\":\"card\",\"data\":{\"card_name\":\"Manufacturing\",\"col\":4}},{\"id\":\"card_zyra\",\"type\":\"card\",\"data\":{\"card_name\":\"Zyra Custom Features\",\"col\":4}},{\"id\":\"card_reports\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2026-11-16 16:37:28.870289",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "package",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Zyra Operations",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Selling",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quotation",
+   "link_count": 0,
+   "link_to": "Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Delivery Note",
+   "link_count": 0,
+   "link_to": "Delivery Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Buying",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Receipt",
+   "link_count": 0,
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Entry",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Warehouse",
+   "link_count": 0,
+   "link_to": "Warehouse",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Batch",
+   "link_count": 0,
+   "link_to": "Batch",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Stock Balance",
+   "link_count": 0,
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manufacturing",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM",
+   "link_count": 0,
+   "link_to": "BOM",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Order",
+   "link_count": 0,
+   "link_to": "Work Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Card",
+   "link_count": 0,
+   "link_to": "Job Card",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zyra Custom Features",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Product Sample",
+   "link_count": 0,
+   "link_to": "Product Sample",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Feedback",
+   "link_count": 0,
+   "link_to": "Product Sample Feedback",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Product Recommender",
+   "link_count": 0,
+   "link_to": "product-recommend",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zyra Settings",
+   "link_count": 0,
+   "link_to": "Zyra Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Order Analysis",
+   "link_count": 0,
+   "link_to": "Sales Order Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Stock Balance",
+   "link_count": 0,
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Production Analytics",
+   "link_count": 0,
+   "link_to": "Production Analytics",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Expiry Report",
+   "link_count": 0,
+   "link_to": "ZY Item expiry batch",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-11-16 16:43:26.722982",
+ "modified_by": "Administrator",
+ "module": "Zyra",
+ "name": "Zyra Operations",
+ "number_cards": [
+  {
+   "label": "Total Finished Products",
+   "number_card_name": "Total Finished Products"
+  },
+  {
+   "label": "Pending Sales Orders",
+   "number_card_name": "Pending Sales Orders"
+  },
+  {
+   "label": "Pending Work Orders",
+   "number_card_name": "Pending Work Orders"
+  },
+  {
+   "label": "Low Stock Items",
+   "number_card_name": "Low Stock Items"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Stock Manager"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Manufacturing Manager"
+  },
+  {
+   "role": "Manufacturing User"
+  },
+  {
+   "role": "All"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product Recommender",
+   "link_to": "product-recommend",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product Sample",
+   "link_to": "Product Sample",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Work Order",
+   "link_to": "Work Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Delivery Note",
+   "link_to": "Delivery Note",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stock Entry",
+   "link_to": "Stock Entry",
+   "type": "DocType"
+  }
+ ],
+ "title": "Zyra Operations",
+ "type": "Workspace"
+}
