@@ -1,0 +1,23 @@
+[
+ {
+  "disabled": 0,
+  "doctype": "Role",
+  "name": "Sample User",
+  "role_name": "Sample User",
+  "desk_access": 1
+ },
+ {
+  "disabled": 0,
+  "doctype": "Role",
+  "name": "Sample Manager",
+  "role_name": "Sample Manager",
+  "desk_access": 1
+ },
+ {
+  "disabled": 0,
+  "doctype": "Role",
+  "name": "Feedback User",
+  "role_name": "Feedback User",
+  "desk_access": 1
+ }
+]

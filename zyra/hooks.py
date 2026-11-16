@@ -264,7 +264,29 @@ scheduler_events = {
 }
 
 doc_events = {
+	"Delivery Note": {
+		"validate": "zyra.sales_order_vald.validate_delivery_note_sample",
+		"on_submit": "zyra.sales_order_vald.on_delivery_note_submit",
+		"on_cancel": "zyra.sales_order_vald.on_delivery_note_cancel",
+	},
 	"Sales Order": {
-		"before_submit": "zyra.sales_order_vald.check_expiry"
-	}
+		"before_submit": [
+			"zyra.sales_order_vald.check_expiry",
+			"zyra.sales_order_vald.validate_sample_link",
+		],
+		"validate": [
+			"zyra.sales_order_vald.validate_sample_link",
+		],
+	},
 }
+
+fixtures = [
+	{
+		"dt": "Role",
+		"filters": [["name", "in", ["Sample User", "Sample Manager", "Feedback User"]]],
+	},
+	{
+		"dt": "Custom Field",
+		"filters": [["dt", "in", ["Sales Order"]]],
+	},
+]

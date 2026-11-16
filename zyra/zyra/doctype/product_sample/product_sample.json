@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-11-15 21:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "customer_name",
+  "sample_date",
+  "column_break_meta",
+  "purpose",
+  "status",
+  "section_break_items",
+  "sample_items",
+  "section_break_delivery",
+  "delivery_note",
+  "column_break_delivery",
+  "delivery_remarks"
+ ],
+ "fields": [
+  {
+   "default": "ZYRA-PS-.YYYY.-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "ZYRA-PS-.YYYY.-.####",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "sample_date",
+   "fieldtype": "Date",
+   "label": "Sample Date",
+   "reqd": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "column_break_meta"
+  },
+  {
+   "default": "Product Trial",
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "Product Trial\nMarketing\nPromotional Distribution\nCustomer Evaluation\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSample Sent\nFeedback Received\nAccepted\nRejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_items",
+   "fieldtype": "Section Break",
+   "label": "Sample Items"
+  },
+  {
+   "fieldname": "sample_items",
+   "fieldtype": "Table",
+   "label": "Sample Items",
+   "options": "Product Sample Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_delivery",
+   "fieldtype": "Section Break",
+   "label": "Delivery & Fulfillment Details"
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "label": "Delivery Note",
+   "no_copy": 1,
+   "options": "Delivery Note",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_delivery",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_remarks",
+   "fieldtype": "Small Text",
+   "label": "Delivery Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Feedback",
+   "link_doctype": "Product Sample Feedback",
+   "link_fieldname": "product_sample"
+  },
+  {
+   "group": "Fulfillment",
+   "link_doctype": "Delivery Note",
+   "link_fieldname": "custom_product_sample"
+  }
+ ],
+ "modified": "2026-11-15 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zyra",
+ "name": "Product Sample",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sample User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sample Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Feedback User",
+   "share": 1,
+   "write": 0
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 0
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "customer, customer_name, purpose, status",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Draft"
+  },
+  {
+   "color": "Orange",
+   "title": "Sample Sent"
+  },
+  {
+   "color": "Blue",
+   "title": "Feedback Received"
+  },
+  {
+   "color": "Green",
+   "title": "Accepted"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ],
+ "title_field": "customer_name",
+ "track_changes": 1
+}

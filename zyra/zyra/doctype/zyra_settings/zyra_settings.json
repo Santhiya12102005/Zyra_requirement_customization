@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-15 22:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sample_management_section",
+  "allow_multiple_samples_per_customer",
+  "max_active_samples_per_customer",
+  "max_sample_items_per_request",
+  "column_break_settings",
+  "default_sample_purpose",
+  "default_sample_warehouse",
+  "require_feedback_before_new_sample",
+  "restrict_sales_order_to_accepted_samples"
+ ],
+ "fields": [
+  {
+   "fieldname": "sample_management_section",
+   "fieldtype": "Section Break",
+   "label": "Product Sample Management"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_multiple_samples_per_customer",
+   "fieldtype": "Check",
+   "label": "Allow Multiple Samples per Customer"
+  },
+  {
+   "default": "3",
+   "description": "Maximum number of pending samples in 'Sample Sent' status allowed for a customer simultaneously",
+   "fieldname": "max_active_samples_per_customer",
+   "fieldtype": "Int",
+   "label": "Max Pending Samples per Customer"
+  },
+  {
+   "default": "5",
+   "description": "Maximum distinct products permitted in a single sample request",
+   "fieldname": "max_sample_items_per_request",
+   "fieldtype": "Int",
+   "label": "Max Products per Sample Request"
+  },
+  {
+   "fieldname": "column_break_settings",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Product Trial",
+   "fieldname": "default_sample_purpose",
+   "fieldtype": "Select",
+   "label": "Default Sample Purpose",
+   "options": "Product Trial\nMarketing\nPromotional Distribution\nCustomer Evaluation\nOther"
+  },
+  {
+   "description": "Default source warehouse from which sample items are issued",
+   "fieldname": "default_sample_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Sample Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "default": "0",
+   "description": "Blocks new sample requests if customer already has a sample pending feedback",
+   "fieldname": "require_feedback_before_new_sample",
+   "fieldtype": "Check",
+   "label": "Require Feedback Before Issuing New Sample"
+  },
+  {
+   "default": "1",
+   "description": "Validates that any Sales Order linking a Product Sample only links an 'Accepted' sample",
+   "fieldname": "restrict_sales_order_to_accepted_samples",
+   "fieldtype": "Check",
+   "label": "Enforce Accepted Status on Linked Sales Orders"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-11-15 22:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Zyra",
+ "name": "Zyra Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sample Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Sample User",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
